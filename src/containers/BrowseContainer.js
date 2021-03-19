@@ -2,6 +2,7 @@ import React,{useEffect,useState,useContext} from 'react'
 import {HeaderContainer} from './HeaderContainer'
 import {CardContainer} from './CardContainer'
 import {MapContainer} from './MapContainer'
+import {TableContainer} from './TableContainer'
 import {Card, CardContent} from "@material-ui/core"
 import {Browse} from "../components"
 import {CountryContext} from '../context/CountryContext'
@@ -10,6 +11,7 @@ import {InfoContext} from '../App'
 
 export function BrowseContainer() {
   const [country, setCountry] = useState("worldwide");
+  const [tableData,setTableData] = useState([]);
   const [countryInfo,setCountryInfo] = useContext(InfoContext);
   console.log("Check Country",country)
   const [countries, setCountries] = useState([])
@@ -33,6 +35,7 @@ export function BrowseContainer() {
           }
         ))
         setCountries(countries);
+        setTableData(data);
       })
     }
     fetchCountriesData();
@@ -57,7 +60,7 @@ export function BrowseContainer() {
       <Browse.Right>
         <CardContent>
           <Browse.SubHeader>Live Cases by Country</Browse.SubHeader>
-          <Table countries={tableData}/>
+          <TableContainer countries={tableData}/>
           <Browse.SubHeader>Worldwide new cases</Browse.SubHeader>
         </CardContent>
       </Browse.Right>
