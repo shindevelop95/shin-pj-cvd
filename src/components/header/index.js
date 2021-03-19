@@ -18,13 +18,21 @@ Header.Title = function HeaderTitle({children, ...restProps}){
     return <Title {...restProps}>{children}</Title>
 }
 
-Header.Form = function HeaderForm({children, ...restProps}){
-    return <FormControl {...restProps}>
-                <Select variant="outlined" value="abc">
-                    <MenuItem value="worldwide">Worldwide</MenuItem>
-                    <MenuItem value="worldwide">2</MenuItem>
-                    <MenuItem value="worldwide">3</MenuItem>
-                    <MenuItem value="worldwide">4</MenuItem>
-                </Select>
-            </FormControl>
+Header.Form = function HeaderForm({children,countries,...restProps}){
+    const [country, setCountry] = useState("worldwide");
+
+    const onCountryChange = (e) =>{
+        const countryCode = e.target.value;
+        setCountry(countryCode);
+    }
+
+    return (<FormControl {...restProps}>
+        <Select variant="outlined" onChange={onCountryChange} value={country}>
+        <MenuItem value="worldwide">Worldwide</MenuItem>
+            {countries.map((country) => (
+                <MenuItem value={country.value}>{country.name}</MenuItem>
+            ))}
+            
+        </Select>
+    </FormControl>)
 }
