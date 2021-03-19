@@ -1,6 +1,8 @@
 import './App.css';
 import React,{useEffect,useState} from 'react'
 import {HeaderContainer} from './containers/HeaderContainer'
+import {CardContainer} from './containers/CardContainer'
+import {MapContainer} from './containers/MapContainer'
 
 function App() {
 
@@ -25,6 +27,14 @@ function App() {
   return (
     <div className="App">
       <HeaderContainer countries ={countries}/>
+      <div className="app__header">
+      <CardContainer title="recover" cases="123" total="12"/>
+      <CardContainer title="recover" cases="123" total="2"/>
+      <CardContainer title="recover" cases="123" total="2"/>
+      <CardContainer title="recover" cases="123" total="2"/>
+      <CardContainer title="recover" cases="123" total="2"/>
+      </div>
+      <MapContainer/>
     </div>
   );
 }
