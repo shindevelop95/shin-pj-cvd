@@ -7,6 +7,7 @@ import {Card, CardContent} from "@material-ui/core"
 import {Browse} from "../components"
 import {CountryContext} from '../context/CountryContext'
 import {InfoContext} from '../App'
+import {sortData} from '../utils/SortData'
 
 
 export function BrowseContainer() {
@@ -34,8 +35,9 @@ export function BrowseContainer() {
             value:country.countryInfo.iso2
           }
         ))
+        const sortedData = sortData(data);
         setCountries(countries);
-        setTableData(data);
+        setTableData(sortedData);
       })
     }
     fetchCountriesData();
