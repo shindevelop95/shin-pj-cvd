@@ -1,6 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState,useContext} from 'react';
 import {MenuItem,FormControl,Select} from "@material-ui/core"
 import {Container, Group, Title} from './styles/header'
+import {CountryContext} from '../../context/CountryContext'
+import {InfoContext} from '../../App'
+
+
 
 export default function Header({children, ...restProps}){
     return (
@@ -19,12 +23,25 @@ Header.Title = function HeaderTitle({children, ...restProps}){
 }
 
 Header.Form = function HeaderForm({children,countries,...restProps}){
-    const [country, setCountry] = useState("worldwide");
-
+    const [country, setCountry] = useContext(CountryContext);
+    const [countryInfo,setCountryInfo]=useContext(InfoContext);
+    console.log("helloshit",countries)
     const onCountryChange = (e) =>{
         const countryCode = e.target.value;
         setCountry(countryCode);
+
+        const url =
+        countryCode === "worldwide"
+      ? "https://disease.sh/v3/covid-19/all"
+      : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
+
+      fetch(url)
+      .then((response) => response.json())
+      .then(data => {
+          setCountryInfo(data);
+      })
     }
+    console.log("COUNTRYINFP>>>",countryInfo)
 
     return (<FormControl {...restProps}>
         <Select variant="outlined" onChange={onCountryChange} value={country}>
@@ -32,7 +49,6 @@ Header.Form = function HeaderForm({children,countries,...restProps}){
             {countries.map((country) => (
                 <MenuItem value={country.value}>{country.name}</MenuItem>
             ))}
-            
         </Select>
     </FormControl>)
 }

@@ -1,41 +1,18 @@
-import './App.css';
-import React,{useEffect,useState} from 'react'
+import React,{useEffect,useState,createContext} from 'react'
 import {HeaderContainer} from './containers/HeaderContainer'
 import {CardContainer} from './containers/CardContainer'
 import {MapContainer} from './containers/MapContainer'
+import {Card, CardContent} from "@material-ui/core"
+import {BrowseContainer} from './containers/BrowseContainer'
 
+export const InfoContext = createContext();
 function App() {
-
-  const [countries, setCountries] = useState([])
-  useEffect(() => {
-    const fetchCountriesData = async () =>{
-      await fetch("https://disease.sh/v3/covid-19/countries")
-      .then((response) => response.json())
-      .then((data) => {
-        const countries = data.map((country) => (
-          {
-            name:country.country,
-            value:country.countryInfo.iso2
-          }
-        ))
-        setCountries(countries);
-      })
-    }
-    fetchCountriesData();
-  },[])
-  console.log("I am the country",countries)
+  const [countryInfo,setCountryInfo] =useState({})
   return (
-    <div className="App">
-      <HeaderContainer countries ={countries}/>
-      <div className="app__header">
-      <CardContainer title="recover" cases="123" total="12"/>
-      <CardContainer title="recover" cases="123" total="2"/>
-      <CardContainer title="recover" cases="123" total="2"/>
-      <CardContainer title="recover" cases="123" total="2"/>
-      <CardContainer title="recover" cases="123" total="2"/>
-      </div>
-      <MapContainer/>
-    </div>
+    <InfoContext.Provider value ={[countryInfo,setCountryInfo]}>
+       <BrowseContainer/>
+    </InfoContext.Provider>
+   
   );
 }
 
