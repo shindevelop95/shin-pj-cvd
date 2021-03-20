@@ -32,10 +32,12 @@ export function BrowseContainer() {
         const countries = data.map((country) => (
           {
             name:country.country,
-            value:country.countryInfo.iso2
+            value:country.countryInfo.iso2,
+            flag:country.countryInfo.flag
           }
         ))
         const sortedData = sortData(data);
+        console.log("SORTED DATA",sortedData)
         setCountries(countries);
         setTableData(sortedData);
       })
@@ -43,7 +45,7 @@ export function BrowseContainer() {
     fetchCountriesData();
   },[])
 
-  
+  console.log("SHOW ME THE TABLE>>>>",tableData)
   console.log("I am the country",countries)
   return (
     <CountryContext.Provider value={[country, setCountry,countries,setCountries]}>

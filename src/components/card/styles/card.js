@@ -35,5 +35,6 @@ export const Total = styled.p`
     
 
 export const Group = styled.div`
-    
+    max-width:150px;
+    min-width:150px;
 `;
