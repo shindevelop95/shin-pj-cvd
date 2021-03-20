@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Content, Title, Cases, Total} from './styles/card';
+import {Container, Content, Title, Cases, Total,Group} from './styles/card';
 export default function Card({children,...restProps}){
     return(
         <Container {...restProps}>
@@ -9,7 +9,13 @@ export default function Card({children,...restProps}){
 }
 
 Card.Content = function CardContent({children,...restProps}){
-    return <Content {...restProps}>{children}</Content>
+    return <Content {...restProps}>
+        <img src ="images/icons/death.jpg" alt="death"/>
+    {children}</Content>
+}
+
+Card.Group = function CardGroup({children,...restProps}){
+    return <Group {...restProps}>{children}</Group>
 }
 
 Card.Title = function CardTitle({children,...restProps}){
