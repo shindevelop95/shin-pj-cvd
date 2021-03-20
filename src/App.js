@@ -1,7 +1,7 @@
 import React,{useEffect,useState,createContext} from 'react'
 import {HeaderContainer} from './containers/HeaderContainer'
 import {CardContainer} from './containers/CardContainer'
-import {MapContainer} from './containers/MapContainer'
+import {MapContainer} from './containers/MapsContainer'
 import {Card, CardContent} from "@material-ui/core"
 import {BrowseContainer} from './containers/BrowseContainer'
 

@@ -23,6 +23,7 @@ export const Title = styled.h2`
 
 export const Cases = styled.p`
     line-height:0.5;
+    color:red;
 `;
 
 export const Total = styled.p`

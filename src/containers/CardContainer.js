@@ -1,9 +1,9 @@
 import React from 'react'
 import {Card} from '../components'
 
-export function CardContainer({title,cases,total}) {
+export function CardContainer({title,cases,total,...props}) {
     return (
-        <Card>
+        <Card onClick={props.onClick}>
             <Card.Content>
                 <Card.Group>
                     <Card.Title>{title}</Card.Title>

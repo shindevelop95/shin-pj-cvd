@@ -22,9 +22,10 @@ Header.Title = function HeaderTitle({children, ...restProps}){
     return <Title {...restProps}>{children}</Title>
 }
 
-Header.Form = function HeaderForm({children,countries,...restProps}){
+Header.Form = function HeaderForm({children,countries,changeMap,changeZoom,...restProps}){
     const [country, setCountry] = useContext(CountryContext);
     const [countryInfo,setCountryInfo]=useContext(InfoContext);
+    
     console.log("helloshit",countries)
     const onCountryChange = (e) =>{
         const countryCode = e.target.value;
@@ -39,6 +40,8 @@ Header.Form = function HeaderForm({children,countries,...restProps}){
       .then((response) => response.json())
       .then(data => {
           setCountryInfo(data);
+          changeMap([data.countryInfo.lat,data.countryInfo.lng]);
+          changeZoom(4);
       })
     }
     console.log("COUNTRYINFP>>>",countryInfo)
