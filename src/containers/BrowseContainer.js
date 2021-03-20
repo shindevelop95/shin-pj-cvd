@@ -3,6 +3,7 @@ import {HeaderContainer} from './HeaderContainer'
 import {CardContainer} from './CardContainer'
 import {MapContainer} from './MapContainer'
 import {TableContainer} from './TableContainer'
+import {LineGraphContainer} from './LineGraphContainer'
 import {Card, CardContent} from "@material-ui/core"
 import {Browse} from "../components"
 import {CountryContext} from '../context/CountryContext'
@@ -66,6 +67,7 @@ export function BrowseContainer() {
           <Browse.SubHeader>Live Cases by Country</Browse.SubHeader>
           <TableContainer countries={tableData}/>
           <Browse.SubHeader>Worldwide new cases</Browse.SubHeader>
+          <LineGraphContainer/>
         </CardContent>
       </Browse.Right>
     </Browse>
