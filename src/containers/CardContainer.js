@@ -7,7 +7,7 @@ export function CardContainer({title,cases,total,...props}) {
             <Card.Content>
                 <Card.Group>
                     <Card.Title>{title}</Card.Title>
-                    <Card.Cases>Today: {cases}</Card.Cases>
+                    <Card.Cases>Today: <span>{cases}</span></Card.Cases>
                     <Card.Total>Total: <span>{total}</span></Card.Total>
                 </Card.Group>
             </Card.Content>

@@ -3,6 +3,7 @@ import {Map} from '../components'
 import {showDataOnMap} from '../utils/SortData'
 import {  MapContainer, TileLayer } from "react-leaflet";
 export function MapsContainer({countries,casesType,center,zoom}){
+    console.log("test",casesType)
     return(
         <Map>
            <MapContainer center={center} zoom={zoom} style={{height:"100%"}}>

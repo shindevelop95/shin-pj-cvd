@@ -5,16 +5,21 @@ export const Container =styled.div`
     overflow:scroll;
     height:400px;
     color:#6a5d5d;
+   
+  overflow-x: hidden;
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+    margin-bottom:40px;
 `;
 export const Column = styled.tr`
     display:flex;
     justify-content:space-between;
-
+    color:white;
     
 
-    &:nth-of-type(odd){
-        background-color:#f3f2f8;
-    }
+ 
 `;
 export const Row = styled.td`
     padding:0.5rem;

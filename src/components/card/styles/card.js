@@ -2,12 +2,13 @@ import { BlockRounded } from '@material-ui/icons';
 import styled from 'styled-components/macro'
 
 export const Container = styled.div`
-   
+   width:100%;
 `;
 
 export const Content = styled.div`
     display:flex;
     align-items:center;
+    cursor: pointer;
 
      > img{
         margin-right:10px;

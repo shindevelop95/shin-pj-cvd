@@ -4,7 +4,8 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
-
+    height:100vh;
+    background-color:white ;
     @media (max-width: 990px) {
         flex-direction: column;
     }
@@ -26,4 +27,6 @@ export const Header = styled.div`
   justify-content: space-between
 `;
 
-export const SubHeader = styled.h3``;
+export const SubHeader = styled.h3`
+    color:white;
+`;

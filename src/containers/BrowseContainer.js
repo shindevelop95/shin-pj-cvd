@@ -11,6 +11,7 @@ import {InfoContext} from '../App'
 import {prettyPrintStat} from '../utils/SortData'
 import {sortData} from '../utils/SortData'
 import "leaflet/dist/leaflet.css"
+import '../utils/util.css'
 
 
 export function BrowseContainer() {
