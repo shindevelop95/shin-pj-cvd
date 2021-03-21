@@ -3,6 +3,7 @@ import {MenuItem,FormControl,Select} from "@material-ui/core"
 import {Container, Group, SubGroup, Title, SubTitle} from './styles/header'
 import {CountryContext} from '../../context/CountryContext'
 import {InfoContext} from '../../App'
+import '../../utils/util.css'
 
 
 
@@ -62,5 +63,6 @@ Header.Form = function HeaderForm({children,countries,changeMap,changeZoom,...re
                 <MenuItem value={country.value}>{country.name}</MenuItem>
             ))}
         </Select>
-    </FormControl>)
+    </FormControl>
+    )
 }

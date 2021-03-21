@@ -5,10 +5,10 @@ export function CardContainer({title,cases,total,...props}) {
     return (
         <Card onClick={props.onClick}>
             <Card.Content>
-                <Card.Group>
+                <Card.Group  total = {total}>
                     <Card.Title >{title}</Card.Title>
                     <Card.Cases {...props} >Today: <span>{cases}</span></Card.Cases>
-                    <Card.Total>Total: <span>{total}</span></Card.Total>
+                    {total ? (<Card.Total {...props}>Total: <span>{total}</span></Card.Total>) : null}   
                 </Card.Group>
             </Card.Content>
         </Card>

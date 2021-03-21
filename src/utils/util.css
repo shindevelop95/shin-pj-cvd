@@ -30,3 +30,33 @@
 .MuiCardContent-root {
   background-color: black;
 }
+
+.MuiSelect-root {
+  color: white;
+}
+
+.MuiInputBase-input {
+  color: white !important;
+  border: 3px solid #eee !important;
+  border-radius: 20px !important;
+  min-width: 100px !important;
+  text-align: center !important;
+  transition: background-color 0.5s;
+}
+
+.MuiInputBase-input:focus {
+  outline: none !important;
+}
+
+.MuiInputBase-input:hover {
+  background-color: black;
+  outline: none !important;
+}
+
+.MuiSelect-select {
+  color: white !important;
+}
+
+.MuiSelect-icon {
+  color: white !important;
+}

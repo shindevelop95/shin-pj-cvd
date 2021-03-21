@@ -8,8 +8,6 @@ export const Container = styled.div`
 export const Content = styled.div`
     display:flex;
     align-items:center;
-    cursor: pointer;
-
      > img{
         margin-right:10px;
         width:50px;
@@ -26,8 +24,12 @@ export const Title = styled.h2`
 export const Cases = styled.p`
     font-size:16px;
     line-height:0.5;
-    color:${({recovered}) => (recovered === true ? '#5FB14A' : '#F70909')};
+    color:#FCE029;
     font-weight:bold;
+
+    span{
+        color:${({recovered}) => (recovered === true ? '#5FB14A' : '#F70909')};
+    }
 `;
 
 export const Total = styled.p`
@@ -40,6 +42,7 @@ export const Total = styled.p`
     
 
 export const Group = styled.div`
+    cursor: ${({total}) => (total ? 'pointer' : 'default')};
     max-width:150px;
     min-width:150px;
 `;
