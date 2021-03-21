@@ -5,7 +5,7 @@ export const Container = styled.div`
     justify-content: space-evenly;
     padding: 20px;
     height:100vh;
-    background-color:white ;
+    background-color:#2C1A02 ;
     @media (max-width: 990px) {
         flex-direction: column;
     }
@@ -13,11 +13,12 @@ export const Container = styled.div`
 `;
 
 export const Left = styled.div`
-    flex: 0.9;
+    flex-basis:100%;
 `;
 
 export const Right = styled.div`
-  
+    background-color:black;
+    margin-left:20px;
 `;
 
 export const Header = styled.div`

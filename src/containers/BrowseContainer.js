@@ -71,11 +71,11 @@ export function BrowseContainer() {
           <CardContainer 
             onClick={(e)=> setCasesType("cases")} title="Coronavirus Cases" cases={prettyPrintStat(countryInfo.todayCases)} total={countryInfo.cases}/>
           <CardContainer 
-            onClick={(e)=> setCasesType("recovered")} title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered}/>
+            onClick={(e)=> setCasesType("recovered")} title="Recovered" cases={prettyPrintStat(countryInfo.todayRecovered)} total={countryInfo.recovered} recovered/>
           <CardContainer
-            onClick={(e)=> setCasesType("deaths")} title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths}/>
-          <CardContainer title="Critical" cases={countryInfo.critical} />
-          <CardContainer title="Active" cases={countryInfo.active}/>
+            onClick={(e)=> setCasesType("deaths")} title="Deaths" cases={prettyPrintStat(countryInfo.todayDeaths)} total={countryInfo.deaths}/>
+          <CardContainer title="Critical" cases={prettyPrintStat(countryInfo.critical)} />
+          <CardContainer title="Active" cases={prettyPrintStat(countryInfo.active)}/>
         </Browse.Header>
         <MapsContainer casesType={casesType} countries={mapCountries} center={mapCenter} zoom={mapZoom}/>
       </Browse.Left>

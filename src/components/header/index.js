@@ -1,6 +1,6 @@
 import React, {useState,useContext} from 'react';
 import {MenuItem,FormControl,Select} from "@material-ui/core"
-import {Container, Group, Title} from './styles/header'
+import {Container, Group, SubGroup, Title, SubTitle} from './styles/header'
 import {CountryContext} from '../../context/CountryContext'
 import {InfoContext} from '../../App'
 
@@ -18,8 +18,17 @@ Header.Group = function HeaderGroup({children, ...restProps}){
     return <Group {...restProps}>{children}</Group>
 }
 
+Header.SubGroup = function HeaderSubGroup({children, ...restProps}){
+    return <SubGroup {...restProps}>{children}</SubGroup>
+}
+
 Header.Title = function HeaderTitle({children, ...restProps}){
     return <Title {...restProps}>{children}</Title>
+}
+
+
+Header.SubTitle = function HeaderSubTitle({children, ...restProps}){
+    return <SubTitle {...restProps}>{children}</SubTitle>
 }
 
 Header.Form = function HeaderForm({children,countries,changeMap,changeZoom,...restProps}){

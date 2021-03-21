@@ -18,21 +18,24 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h2`
-    font-size:1rem;
+    color:#FFF7F7;
+    font-size:14px;
     line-height:0.5
 `;
 
 export const Cases = styled.p`
+    font-size:16px;
     line-height:0.5;
-    color:red;
+    color:${({recovered}) => (recovered === true ? '#5FB14A' : '#F70909')};
+    font-weight:bold;
 `;
 
 export const Total = styled.p`
+    font-size:10px;
     line-height:0.5;
     font-weight:900;
-    >span{
-        color:red;
-    }
+    color:#707070;
+
 `;
     
 
