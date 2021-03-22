@@ -8,9 +8,9 @@ export default function Card({children,...restProps}){
     )
 }
 
-Card.Content = function CardContent({children,...restProps}){
+Card.Content = function CardContent({children,display,...restProps}){
     return <Content {...restProps}>
-        <img src ="images/icons/death.jpg" alt="death"/>
+        <img src ={`images/icons/${display}.png`}/>
     {children}</Content>
 }
 

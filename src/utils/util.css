@@ -60,3 +60,7 @@
 .MuiSelect-icon {
   color: white !important;
 }
+
+.MuiCardContent-root {
+  height: 100%;
+}

@@ -68,14 +68,14 @@ export function BrowseContainer() {
                          changeMapZoom = {setMapZoom}
                           countries ={countries}/>
         <Browse.Header>
-          <CardContainer 
+          <CardContainer display="bacteria"
             onClick={(e)=> setCasesType("cases")} title="Coronavirus Cases" cases={prettyPrintStat(countryInfo.todayCases)} total={countryInfo.cases}/>
-          <CardContainer 
+          <CardContainer display="heart"
             onClick={(e)=> setCasesType("recovered")} title="Recovered" cases={prettyPrintStat(countryInfo.todayRecovered)} total={countryInfo.recovered} recovered/>
-          <CardContainer
+          <CardContainer display="skull"
             onClick={(e)=> setCasesType("deaths")} title="Deaths" cases={prettyPrintStat(countryInfo.todayDeaths)} total={countryInfo.deaths}/>
-          <CardContainer title="Critical" cases={prettyPrintStat(countryInfo.critical)} />
-          <CardContainer title="Active" cases={prettyPrintStat(countryInfo.active)}/>
+          <CardContainer display="warning" title="Critical" cases={prettyPrintStat(countryInfo.critical)} />
+          <CardContainer display="patient" title="Active" cases={prettyPrintStat(countryInfo.active)}/>
         </Browse.Header>
         <MapsContainer casesType={casesType} countries={mapCountries} center={mapCenter} zoom={mapZoom}/>
       </Browse.Left>

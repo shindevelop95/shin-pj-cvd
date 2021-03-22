@@ -5,6 +5,7 @@ export const Container = styled.div`
     justify-content: space-evenly;
     padding: 20px;
     height:100vh;
+    padding:0;
     background-color:#2C1A02 ;
     @media (max-width: 990px) {
         flex-direction: column;
@@ -14,6 +15,7 @@ export const Container = styled.div`
 
 export const Left = styled.div`
     flex-basis:100%;
+    padding:20px;
 `;
 
 export const Right = styled.div`
