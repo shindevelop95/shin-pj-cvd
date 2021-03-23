@@ -1,6 +1,6 @@
 import React from 'react';
 import {Map} from '../components'
-import {showDataOnMap} from '../utils/SortData'
+import {showDataOnMap} from '../utils/util'
 import {  MapContainer, TileLayer } from "react-leaflet";
 export function MapsContainer({countries,casesType,center,zoom}){
     console.log("test",casesType)

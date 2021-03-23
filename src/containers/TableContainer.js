@@ -1,5 +1,6 @@
 import React from 'react'
 import {Table} from '../components'
+import numeral from "numeral";
 
 export function TableContainer({countries}) {
     console.log("SHOW ME THE TABLECONITNAER>>>>",countries)

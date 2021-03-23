@@ -1,15 +1,11 @@
 import React,{useEffect,useState,useContext} from 'react'
-import {HeaderContainer} from './HeaderContainer'
-import {CardContainer} from './CardContainer'
-import {MapsContainer} from './MapsContainer'
-import {TableContainer} from './TableContainer'
-import {LineGraphContainer} from './LineGraphContainer'
+import {HeaderContainer,CardContainer,MapsContainer,LineGraphContainer,TableContainer} from './index'
 import {Card, CardContent} from "@material-ui/core"
 import {Browse} from "../components"
 import {CountryContext} from '../context/CountryContext'
 import {InfoContext} from '../App'
-import {prettyPrintStat} from '../utils/SortData'
-import {sortData} from '../utils/SortData'
+import {prettyPrintStat} from '../utils/util'
+import {sortData} from '../utils/util'
 import "leaflet/dist/leaflet.css"
 import '../utils/util.css'
 

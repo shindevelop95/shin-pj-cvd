@@ -4,7 +4,7 @@ import {Card} from '../components'
 export function CardContainer({title,cases,total,display,...props}) {
     return (
         <Card onClick={props.onClick}>
-            <Card.Content display={display}>
+            <Card.Content display={display} total = {total}>
                 <Card.Group  total = {total}>
                     <Card.Title >{title}</Card.Title>
                     <Card.Cases {...props} >Today: <span>{cases}</span></Card.Cases>
