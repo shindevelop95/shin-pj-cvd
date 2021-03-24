@@ -64,7 +64,26 @@
 .MuiCardContent-root {
   height: 100%;
 }
-
+.leaflet-interactive {
+  animation: fadein 5s infinite;
+}
+@keyframes fadein {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*Map*/
 @media (max-width: 768px) {
   .leaflet-container {
