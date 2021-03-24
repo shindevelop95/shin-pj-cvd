@@ -1,23 +1,29 @@
 .info-flag {
   height: 80px;
   width: 100%;
+  margin: auto;
+  margin-bottom: 10px;
   background-size: cover;
   border-radius: 8px;
 }
 
 .info-flag img {
-  width: 100px;
+  width: 150px;
   border-radius: 5px;
 }
 
 .info-container {
   width: 150px;
+  text-align: center;
+  background-color: black;
+  color: #eee;
+  padding: 5px;
 }
 
 .info-name {
   font-size: 20px;
   font-weight: bold;
-  color: #555;
+  color: #18e0bf;
 }
 
 .info-confirmed,
@@ -25,6 +31,10 @@
 .info-deaths {
   font-size: 16px;
   margin-top: 5px;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: black !important;
 }
 
 .MuiCardContent-root {

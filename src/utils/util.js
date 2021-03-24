@@ -5,15 +5,15 @@ import './util.css'
 
 const casesTypeColors = {
     recovered: {
-      hex: "blue",
+      hex: "green",
       multiplier: 600,
     },
     deaths: {
-      hex: "#fb4443",
+      hex: "red",
       multiplier: 1000,
     },
     cases: {
-      hex: "black",
+      hex: "red",
       multiplier: 400,
     },
   };
@@ -35,6 +35,7 @@ export const prettyPrintStat = (stat) =>
   stat ? `+${numeral(stat).format("0.0a")}` : "+0";
 
 export const showDataOnMap = (data, casesType='deaths') => (
+
     data.map(country => (
         <Circle
           center={[country.countryInfo.lat, country.countryInfo.long]}
