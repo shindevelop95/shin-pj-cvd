@@ -9,7 +9,7 @@ export default function Card({children,...restProps}){
 }
 
 Card.Content = function CardContent({children,display,...restProps}){
-    return <Content {...restProps}>
+    return <Content {...restProps}> 
         <img src ={`images/icons/${display}.png`}/>
     {children}</Content>
 }

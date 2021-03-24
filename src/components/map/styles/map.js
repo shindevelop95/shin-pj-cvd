@@ -6,6 +6,11 @@ export const Container = styled.div`
         padding:1rem;
         border-radius:30px;
         margin-top:16px;
-        box-shadow: 0 0 8px -4px rgba(0,0,0,0.5)
+        box-shadow: 0 0 8px -4px rgba(0,0,0,0.5);
+
+        @media (max-width: 768px) {
+                height:400px;
+                margin-top:30px;
+  }
 
 `;

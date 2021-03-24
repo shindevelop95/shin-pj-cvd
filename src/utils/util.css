@@ -64,3 +64,10 @@
 .MuiCardContent-root {
   height: 100%;
 }
+
+/*Map*/
+@media (max-width: 768px) {
+  .leaflet-container {
+    height: 100% !important;
+  }
+}

@@ -3,11 +3,21 @@ import styled from 'styled-components/macro'
 
 export const Container = styled.div`
    width:100%;
-   margin-left:50px;
+   margin-left:40px;
+
+   @media (max-width: 768px) {
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+    margin-bottom:10px;
+    width:80%;
+    
+  }
 `;
 
 export const Content = styled.div`
     display:flex;
+    position:relative;
     align-items:center;
     justify-content:center;
      > img{
@@ -15,14 +25,16 @@ export const Content = styled.div`
         width:50px;
         height:50px;
     }
-    background-color:${({total}) => (total ? "#300B02": "none") };
-    border:${({total}) => (total ? "1px solid white": "none") };
+    background-color:${({total}) => (total ? "#300B02": "#858584") };
+    border:${({total}) => (total ? "2px solid white": "none") };
     border-radius:30px;
     padding:10px;
     transition:0.4s;
     &:hover{
         background-color:${({total}) => (total ? "black": "none") };
+        border:${({total}) => (total ? "2px solid yellow": "none") };
     }
+
 `;
 
 export const Title = styled.h2`

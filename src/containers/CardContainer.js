@@ -3,6 +3,7 @@ import {Card} from '../components'
 
 export function CardContainer({title,cases,total,display,...props}) {
     return (
+       
         <Card onClick={props.onClick}>
             <Card.Content display={display} total = {total}>
                 <Card.Group  total = {total}>

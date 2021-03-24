@@ -7,15 +7,19 @@ export const Container = styled.div`
     height:100vh;
     padding:0;
     background-color:#2C1A02 ;
-    @media (max-width: 990px) {
-        flex-direction: column;
-    }
+    @media (max-width: 768px) {
+    flex-direction: column;
+  }
 
 `;
 
 export const Left = styled.div`
     flex-basis:100%;
     padding:20px;
+
+    @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Right = styled.div`
@@ -27,7 +31,15 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  justify-content: space-between
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    
+    display:flex;
+    flex-direction:column;
+    margin-bottom:10px;
+    justify-content:center;
+}
 `;
 
 export const SubHeader = styled.h3`
