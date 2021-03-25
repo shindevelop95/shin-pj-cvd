@@ -11,7 +11,7 @@ export function TableContainer({countries}) {
                 <Table.Column>
                     <Table.Row><img src={country.countryInfo.flag}/></Table.Row>
                     <Table.Row>{country.country}</Table.Row>
-                    <Table.Row><strong>{country.cases}</strong></Table.Row>
+                    <Table.Row><strong>{numeral(country.cases).format()}</strong></Table.Row>
                 </Table.Column>
             ))
             

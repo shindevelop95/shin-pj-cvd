@@ -17,10 +17,11 @@ export const Group = styled.div`
 
     
 `;
-export const Title = styled.div`
+export const Title = styled.h1`
     color:#FFF7F7;
     font-size:30px;
     font-weight:bold;
+    font-family:'Train One', cursive;
 
     @media (max-width: 768px) {
         font-size:20px;
@@ -30,6 +31,8 @@ export const Title = styled.div`
 export const SubTitle = styled.h3`
     color:#18E0BF;
     line-height:0.7;
+    font-size:24px;
+    font-family:'Train One', cursive;
     @media (max-width: 768px) {
         font-size:14px;
 }

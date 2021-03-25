@@ -11,7 +11,6 @@ export const Container = styled.div`
     margin:auto;
     margin-bottom:10px;
     width:80%;
-    
   }
 `;
 
@@ -55,11 +54,10 @@ export const Cases = styled.p`
 `;
 
 export const Total = styled.p`
-    font-size:10px;
+    font-size:12px;
     line-height:0.5;
     font-weight:900;
-    color:#707070;
-
+    color:#eee;
 `;
     
 

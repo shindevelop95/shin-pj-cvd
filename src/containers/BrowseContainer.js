@@ -65,11 +65,11 @@ export function BrowseContainer() {
                           countries ={countries}/>
         <Browse.Header>
           <CardContainer display="bacteria"
-            onClick={(e)=> setCasesType("cases")} title="Coronavirus Cases" cases={prettyPrintStat(countryInfo.todayCases)} total={countryInfo.cases}/>
+            onClick={(e)=> setCasesType("cases")} title="Coronavirus Cases" cases={prettyPrintStat(countryInfo.todayCases)} total={prettyPrintStat(countryInfo.cases)}/>
           <CardContainer display="heart"
-            onClick={(e)=> setCasesType("recovered")} title="Recovered" cases={prettyPrintStat(countryInfo.todayRecovered)} total={countryInfo.recovered} recovered/>
+            onClick={(e)=> setCasesType("recovered")} title="Recovered" cases={prettyPrintStat(countryInfo.todayRecovered)} total={prettyPrintStat(countryInfo.recovered)} recovered/>
           <CardContainer display="skull"
-            onClick={(e)=> setCasesType("deaths")} title="Deaths" cases={prettyPrintStat(countryInfo.todayDeaths)} total={countryInfo.deaths}/>
+            onClick={(e)=> setCasesType("deaths")} title="Deaths" cases={prettyPrintStat(countryInfo.todayDeaths)} total={prettyPrintStat(countryInfo.deaths)}/>
           <CardContainer display="warning" title="Critical" cases={prettyPrintStat(countryInfo.critical)} />
           <CardContainer display="patient" title="Active" cases={prettyPrintStat(countryInfo.active)}/>
         </Browse.Header>
